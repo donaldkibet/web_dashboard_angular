@@ -11,7 +11,9 @@ import { RouterModule, Routes } from '@angular/router';
 import * as HighchartsMore from 'highcharts/highcharts-more.src';
 import * as HighchartsSolidGauge from 'highcharts/modules/solid-gauge'; 
 import * as Highcharts from 'highcharts';
-
+import { FiltersComponent } from './filters/filters.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -28,13 +30,16 @@ const appRoute: Routes = [
     OverviewComponent,
     ScreenedComponent,
     EnrolledComponent,
-    Covid19resultsComponent
+    Covid19resultsComponent,
+    FiltersComponent
   ],
   imports: [
     CommonModule,
     HighchartsChartModule,
     RouterModule.forRoot(appRoute),
     HttpClientModule, // Add HttpClientModule here,
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot()
   ],
   exports: [
     MdashboardComponent

@@ -9,9 +9,12 @@ import { CoreModule } from './core/core.module';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MdashboardModule } from './mdashboard/mdashboard.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SariDashboardModule } from './sari-dashboard/sari-dashboard.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CoreModule,
     HighchartsChartModule,
     MdashboardModule,
-    NgbModule
+    NgbModule,
+    SariDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
